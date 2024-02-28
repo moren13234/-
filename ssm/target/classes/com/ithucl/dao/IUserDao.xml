@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+resources.com.ithucl.dao.IUserDao.xml 可以提供main.java.com.ithucl.domain.User类的配置文件
+-->
+<mapper namespace="com.ithucl.dao.AccountDao">
+
+    <!-- 配置查询所有-->
+    <select id="findAll"  resultType="com.ithucl.domain.Account">/*findAll是IUserDao.java中定义的方法*/
+        select * from account
+    </select>
+    <!--&lt;!&ndash;配置查询Id&ndash;&gt;-->
+    <!--<select id="findAccountById" parameterType="java.lang.Integer" resultType="com.ithucl.domain.Account">-->
+        <!--select * from account where id = #{id}-->
+    <!--</select>-->
+    <!--&lt;!&ndash;配置保存信息&ndash;&gt;-->
+    <!--<insert id="saveAccount"  parameterType="com.ithucl.domain.Account">-->
+        <!--<selectKey keyProperty="id" keyColumn="id" resultType="int" order="AFTER">-->
+            <!--select last_insert_id();-->
+        <!--</selectKey>-->
+         <!--insert into account(name,money)values(#{name},#{money});-->
+    <!--</insert>-->
+    <!--&lt;!&ndash;配置更新信息&ndash;&gt;-->
+    <!--<update id="updateAccount"  parameterType="com.ithucl.domain.Account">-->
+        <!--update account set name=#{name},money=#{money} where id=#{id}-->
+    <!--</update>-->
+    <!--&lt;!&ndash;配置删除信息&ndash;&gt;-->
+    <!--<delete id="deleteAccount"  parameterType="java.lang.Integer">-->
+         <!--delete from account where id = #{id}-->
+    <!--</delete>-->
+</mapper>
